@@ -1,6 +1,6 @@
 # gulp-starter-kit
 
-If you want to know how to build that kind of startet kit you can watch the YouTube videos I created while working on this starter kit: https://goo.gl/sMFmyN (Note: Videos are in Polish).
+This is the Upqode Front-End task performed by Alex Yatseyko in November 2019
 
 ## Prerequisites
 
@@ -10,22 +10,17 @@ If you want to know how to build that kind of startet kit you can watch the YouT
 
 ## Usage
 
-### 1. Clone repo
+### 1. Go inside cloned repo
 ```
-git clone https://github.com/marcinkrzeminski/gulp-starter-kit.git
-```
-
-### 2. Go inside cloned repo
-```
-cd gulp-starter-kit
+cd upqode
 ```
 
-### 3. Install all dependencies (make sure nodejs with npm is installed on your machine)
+### 2. Install all dependencies (make sure nodejs with npm is installed on your machine)
 ```
 npm install
 ```
 
-### 4. Run default gulp task (will open browser window with live reload)
+### 3. Run default gulp task (will open browser window with live reload)
 ```
 gulp
 ```

@@ -124,6 +124,12 @@ $(function() {
     cssEase:"cubic-bezier(0.87, 0.03, 0.41, 0.9)",
   })
 
+const cities = ['Los Angeles', 'New York', 'Boston', 'Detroit']
+      addresses = ['', '', '', '']
+
+  $('.map-slider .slick-dots li:nth-child(1)').html(`<div class="map-slider__desc"><div class="map-slider__icon"></div><div class="map-slider__city"><p>${cities[0]}, USA</p><p class="map-slider__address">Address,Address,Address,Address</p></div></div>`);
+  
+  
   slideWrapper.slick({
     // fade:true,
     autoplaySpeed:4000,

@@ -1,5 +1,5 @@
 {
-  "name": "UPQODE",
+  "name": "upqode",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "keywords": [
     "gulp"
   ],
-  "author": "Marcin Krzemiński",
+  "author": "Alex Yatsaeyko",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.17.5",

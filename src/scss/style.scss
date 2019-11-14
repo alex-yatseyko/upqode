@@ -4,7 +4,7 @@
 
 
 body {
-    background-color: #fff;
+    background-color: #F2F2F2;
     color: $color-main;
     margin: 0;
     font-family: poppins;
@@ -68,61 +68,59 @@ nav ul {
     background: linear-gradient(180deg, #050D1D 11.29%, rgba(5, 13, 29, 0) 90.3%);
     mix-blend-mode: normal;
     height: 100vh;
-}
-.slick-dots {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+  .slick-dots {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 1rem 0;
+      list-style-type: none;
+      bottom: 50px;
+      z-index: 10;
+      li {
+        margin: 0 0.55rem;
+      }
+      button {
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        padding: 0;
+        border: none;
+        border-radius: 100%;
+        background-color: #fff;
+        text-indent: -9999px;
+        cursor: pointer;
+        &:after {
+          content: '';
+          border: 1px solid transparent;
+          height: 24px;
+          border-radius: 50%;
+          width: 24px;
+          position: relative;
+          top: -18px;
+          display: block;
+          left: -5px;
+          transition: .5s;
+        }
+      }
+      li.slick-active button {
+        background-color: $color-main;
+        border-radius: 50%;
+        transition: .5s;
+        &:after {
+          content: '';
+          border: 1px solid $color-main;
+        }
+       }
+    
+    }
 }
 
-.slick-dots {
-  position: absolute;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 1rem 0;
-  list-style-type: none;
-  bottom: 50px;
-  z-index: 10;
-  li {
-    margin: 0 0.55rem;
-  }
-  button {
-    display: block;
-    width: 1rem;
-    height: 1rem;
-    padding: 0;
-    border: none;
-    border-radius: 100%;
-    background-color: #fff;
-    text-indent: -9999px;
-    cursor: pointer;
-    &:after {
-      content: '';
-      border: 1px solid transparent;
-      height: 24px;
-      border-radius: 50%;
-      width: 24px;
-      position: relative;
-      top: -18px;
-      display: block;
-      left: -5px;
-      transition: .5s;
-    }
-  }
-  li.slick-active button {
-    background-color: $color-main;
-    border-radius: 50%;
-    transition: .5s;
-    &:after {
-      content: '';
-      border: 1px solid $color-main;
-    }
-   }
-
-}
 
 /* Contact */
 
@@ -298,6 +296,50 @@ footer {
 .map-slider {
   .slick-dots {
     position: absolute;
-    bottom: -200px;
+    bottom: -250px;
+    list-style: none;
+  }
+    .map-slider__desc {
+      display: flex;
+      padding: 5px 10px;
+      align-items: start;
+      justify-content: space-between;
+      .map-slider__icon {
+        background: url(../img/map.svg);
+        background-repeat: no-repeat;
+        height: 25px;
+        width: 25px;
+        margin-top: 3px;
+      }
+      .map-slider__city {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        p {
+          margin: 0;
+        }
+        .map-slider__address {
+          font-weight: 100;
+        }
+        /* .map-slider__icon {
+          background: url(./img/map.svg);
+          background-repeat: no-repeat;
+        } */
+      }
+      .map-slider__address {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        color: #6C6C6C;
+      }
+    }
+  .slick-active {
+    background: #fff;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.0758039);
+    .map-slider__desc .map-slider__icon {
+      background: url(../img/map-green.svg);
+      background-repeat: no-repeat;
+    }
+    
   }
 }
