@@ -74,6 +74,10 @@ nav ul {
     background: linear-gradient(180deg, #050D1D 11.29%, rgba(5, 13, 29, 0) 90.3%);
     mix-blend-mode: normal;
     height: 100vh;
+    iframe {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   .slick-dots {
       list-style: none;
       display: flex;
@@ -132,8 +136,10 @@ nav ul {
 #contact {
   background: $bg-color;
   padding: 100px;
-  width: 60%;
+  width: 80%;
   margin: auto;
+  padding-left: 20vw;
+  padding-top: 10vw;
   .contact-title {
     position: absolute;
     z-index: 200;
@@ -344,6 +350,7 @@ footer {
     position: absolute;
     z-index: 90;
     top: 100px;
+    margin-top: 21px;
   }
   .map-slider__content {
     background: #FFFFFF;
@@ -384,11 +391,13 @@ footer {
   }
 
   .slick-dots {
-    /* position: absolute;
-    bottom: -250px; */
     list-style: none;
     z-index: 100;
     margin-right: 60px;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    margin-top: 200px;
   }
     .map-slider__desc {
       cursor: pointer;
@@ -423,9 +432,6 @@ footer {
 }
 .map-slider {
   .slick-dots {
-    position: absolute;
-    left: 0;
-    margin-top: 200px;
     .slick-active {
       background: #fff;
       box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.0758039);
