@@ -1,4 +1,4 @@
-# gulp-starter-kit
+# Upqode Front-End Task
 
 This is the Upqode Front-End task performed by Alex Yatseyko in November 2019
 
