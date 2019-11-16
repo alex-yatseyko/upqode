@@ -10,6 +10,13 @@ body {
     font-family: poppins;
     overflow-x: hidden
 }
+.row {
+  display: flex;
+}
+.center-col {
+  display: flex;
+  justify-content: center;
+}
 .black {
   color: $black-font;
 }
@@ -73,7 +80,8 @@ nav ul {
 #home {
     background: linear-gradient(180deg, #050D1D 11.29%, rgba(5, 13, 29, 0) 90.3%);
     mix-blend-mode: normal;
-    height: 100vh;
+    // height: 100vh;
+    height: 100%;
     iframe {
       background-size: cover;
       background-repeat: no-repeat;
@@ -131,8 +139,23 @@ nav ul {
     }
 }
 
+/* Services Section */
+#services {
+  .services-phone-bg {
 
-/* Contact */
+  }
+  .services-phone{
+    position: absolute;
+  }
+  .services-btn {
+    border: 2px solid #00A031;
+    box-sizing: border-box;
+    border-radius: 28px;
+  }
+}
+/* Team Section */
+
+/* Contact Section */
 #contact {
   background: $bg-color;
   padding: 100px;

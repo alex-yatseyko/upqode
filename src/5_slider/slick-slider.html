@@ -10,20 +10,20 @@
     <div class="container">
     <div class="slider-navigation">
         <div class="next">       
-            <div class="next-item"><img src="img/les.png" class="showed" alt=""><p>NEXT→</br>Les Yakymchuk</p></div>
-            <div class="next-item"><img src="img/ann.png" alt=""><p>NEXT→</br</p>Anna Fitak</div>
-            <div class="next-item"><img src="img/and.png" alt=""><p>NEXT→</br>Andriy Skrobach</p></div>
-            <div class="next-item"><img src="img/mara-2.png" alt=""><p>NEXT→</br>Mara Bratushchyk-Khoma</p></div>
-            <div class="next-item"><img src="img/alex.png" alt=""><p>NEXT→</br>Alex Yatseyko</p></div>
+            <div class="next-item"><img src="img/les.png" class="showed" alt=""><p>NEXT→</br><span class="next-item__name">Les Yakymchuk</span></p></div>
+            <div class="next-item"><img src="img/ann.png" alt=""><p>NEXT→</br><span class="next-item__name">Anna Fitak</span></p></div>
+            <div class="next-item"><img src="img/and.png" alt=""><p>NEXT→</br><span class="next-item__name">Andriy Skrobach</span></p></div>
+            <div class="next-item"><img src="img/mara-2.png" alt=""><p>NEXT→</br><span class="next-item__name">Mara Bratushchyk-Khoma</span></p></div>
+            <div class="next-item"><img src="img/alex.png" alt=""><p>NEXT→</br><span class="next-item__name">Alex Yatseyko</span></p></div>
             <div class="next-item"><img src="img/alex.png" style="opacity: 0" alt=""><p>NEXT→</br></p></div>
         </div>
         <div class="prev">           
-            <div class="next-item"><p>←PREV</br></p><img style="opacity:0" src="img/les.png" class="showed" alt=""></div>
-            <div class="next-item"><p>←PREV</br>Oscar Wilde</p><img src="img/foto.png" alt=""></div>
-            <div class="next-item"><p>←PREV</br>Les Yakymchuk</p><img src="img/les.png" alt=""></div>
-            <div class="next-item"><p>←PREV</br>Anna Fitak</p><img src="img/ann.png" alt=""></div>
-            <div class="next-item"><p>←PREV</br>Andriy Skrobach</p><img src="img/and.png" alt=""></div>
-            <div class="next-item"><p>←PREV</br>Mara Bratushchyk-Khoma</p><img src="img/mara-2.png" alt=""></div>       
+            <div class="prev-item"><p>←PREV</br></p><img style="opacity:0" src="img/les.png" class="showed" alt=""></div>
+            <div class="prev-item"><p>←PREV</br><span class="prev-item__name">Oscar Wilde</span></p><img src="img/foto.png" alt=""></div>
+            <div class="prev-item"><p>←PREV</br><span class="prev-item__name">Les Yakymchuk</span></p><img src="img/les.png" alt=""></div>
+            <div class="prev-item"><p>←PREV</br><span class="prev-item__name">Anna Fitak</span></p><img src="img/ann.png" alt=""></div>
+            <div class="prev-item"><p>←PREV</br><span class="prev-item__name">Andriy Skrobach</span></p><img src="img/and.png" alt=""></div>
+            <div class="prev-item"><p>←PREV</br><span class="prev-item__name">Mara Bratushchyk-Khoma</span></p><img src="img/mara-2.png" alt=""></div>       
         </div>
     </div>
     <div class="photos">
@@ -95,6 +95,7 @@
             justify-content: space-around; */
             max-width: 1280px !important;
             overflow-x: hidden;
+            font-family: poppins;
         }
         .container {
             width: 80%;
@@ -183,8 +184,22 @@
         }
         .next-item, .prev-item {
             display: flex;
+            color: green;
+            width: 300px !important;
             /* left: 0 !important;
             top: 0 !important; */
+        }
+        .next-item p, .prev-item p {
+            font-size: 16px;
+        }
+        .prev .prev-item {
+            justify-content: flex-end;
+        }
+        .next-item__name, .prev-item__name {
+            font-size: 18px;
+        }
+        .next .next-item {
+            justify-content: flex-start;
         }
         .slick-list {
             height: 100px;
