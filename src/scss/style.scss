@@ -144,10 +144,10 @@ nav ul {
 
 /* Services Section */
 #services {
-  .services-path {
+  .services-path, #linesvg {
     position: absolute;
-    padding-top: 500px;
-    left: 25%;
+    padding-top: 200px;
+    left: 28%;
   }
   .col {
     width: 50%;
@@ -157,10 +157,9 @@ nav ul {
   }
   .services-phone{
     position: absolute;
-    visibility: hidden;
   }
   .services-list {
-
+    list-style: none;
   }
   .services-btn {
     border: 1px solid $color-main;
