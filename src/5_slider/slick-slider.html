@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body> 
+    <div class="container">
+    <div class="slider-navigation">
+        <div class="next">       
+            <div class="next-item"><img src="img/les.png" class="showed" alt=""><p>NEXT→</br>Les Yakymchuk</p></div>
+            <div class="next-item"><img src="img/ann.png" alt=""><p>NEXT→</br</p>Anna Fitak</div>
+            <div class="next-item"><img src="img/and.png" alt=""><p>NEXT→</br>Andriy Skrobach</p></div>
+            <div class="next-item"><img src="img/mara-2.png" alt=""><p>NEXT→</br>Mara Bratushchyk-Khoma</p></div>
+            <div class="next-item"><img src="img/alex.png" alt=""><p>NEXT→</br>Alex Yatseyko</p></div>
+            <div class="next-item"><img src="img/alex.png" style="opacity: 0" alt=""><p>NEXT→</br></p></div>
+        </div>
+        <div class="prev">           
+            <div class="next-item"><p>←PREV</br></p><img style="opacity:0" src="img/les.png" class="showed" alt=""></div>
+            <div class="next-item"><p>←PREV</br>Oscar Wilde</p><img src="img/foto.png" alt=""></div>
+            <div class="next-item"><p>←PREV</br>Les Yakymchuk</p><img src="img/les.png" alt=""></div>
+            <div class="next-item"><p>←PREV</br>Anna Fitak</p><img src="img/ann.png" alt=""></div>
+            <div class="next-item"><p>←PREV</br>Andriy Skrobach</p><img src="img/and.png" alt=""></div>
+            <div class="next-item"><p>←PREV</br>Mara Bratushchyk-Khoma</p><img src="img/mara-2.png" alt=""></div>       
+        </div>
+    </div>
+    <div class="photos">
+        <!-- <img src="img/foto.png" class="showed" alt="">
+        <img src="img/les.png" alt="">
+        <img src="img/ann.png" alt="">
+        <img src="img/and.png" alt="">
+        <img src="img/mara-2.png" alt="">
+        <img src="img/alex.png" alt=""> -->
+
+            <div class="photos-item"><div class="photos-item__details"><h2>Oscar Wilde</h2><p>Art Director</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, nostrum aliquam. Voluptate, distinctio nostrum. Nisi, debitis quam ipsa, consectetur adipisci similique dolorum, eaque recusandae maiores itaque error alias officia cumque.</p> </div><img src="img/foto.png" alt=""></div>
+            <div class="photos-item"><div class="photos-item__details"><h2>Les Yakymchuk</h2><p>Motion Designer</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus maiores porro consequuntur natus vel tempore, fuga nam necessitatibus totam deserunt culpa quos minus dignissimos itaque explicabo ullam nulla dolorem laudantium.</p> </div><img src="img/les.png" alt=""></div>
+            <div class="photos-item"><div class="photos-item__details"><h2>Anna Fitak</h2><p>Scientist</p><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, nesciunt? Dolor, aperiam adipisci? Sed odit dolores debitis accusamus error, assumenda omnis, dolor nam architecto sapiente vero a suscipit aperiam delectus?</p> </div><img src="img/ann.png" alt=""></div>
+            <div class="photos-item"><div class="photos-item__details"><h2>Andriy Skrobach</h2><p>Consultant</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium nisi molestiae eos culpa, inventore quae animi vitae. Itaque impedit asperiores ipsum dolor dolore, pariatur placeat commodi atque, ullam vel repellendus.</p> </div><img src="img/and.png" alt=""></div>
+            <div class="photos-item"><div class="photos-item__details"><h2>Mara Bratushchyk-Khoma</h2><p>Journalist</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam velit quos beatae repellat, ut magnam explicabo amet voluptas aspernatur. Sequi perferendis asperiores magnam labore iusto hic aliquid, fugit placeat corporis.</p> </div><img src="img/mara-2.png" alt=""></div>       
+            <div class="photos-item"><div class="photos-item__details"><h2>Alex Yatseyko</h2><p>Front-End Developer</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maiores, voluptas saepe illum rem architecto numquam aperiam esse sapiente id ad modi consectetur voluptatem perferendis neque iure. Deleniti, necessitatibus suscipit?</p></div><img src="img/alex.png" alt=""></div>       
+    </div>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script>
+        $('.photos').slick({
+            arrows: true,
+            infinite:false,
+            autoplay:false,
+            slidesToShow:1,
+            adaptiveHeight: true,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next'),
+            slidesToScroll:1,
+            centerMode: true,
+            draggable: false,
+            centerMode: true,
+            fade: true,
+            // speed: 500,
+            // centerPadding: '60px',
+            cssEase: 'ease-in-out',
+            touchThreshold: 100
+        })
+        $('.next').slick({
+            infinite:false,
+            autoplay:false,
+            slidesToShow:1,
+            slidesToScroll:1,
+            fade: true,
+            arrows: false,
+        })
+        $('.prev').slick({
+            infinite:false,
+            autoplay:false,
+            slidesToShow:1,
+            slidesToScroll:1,
+            fade: true,
+            arrows: false
+        })
+        $('.next').click(() => {
+            $('.next').slick("slickNext")
+            $('.prev').slick("slickNext")
+            // if($('.photos').slick()){}
+        })
+        $('.prev').click(() => {
+            $('.next').slick("slickPrev")
+            $('.prev').slick("slickPrev")
+        })
+    
+    </script>
+    <style>
+        body {
+            /* display: flex;
+            justify-content: space-around; */
+            max-width: 1280px !important;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .photos {
+            /* width: 200px; */
+            height: auto;
+        }
+        .photos-item {
+            display: flex;
+            width: 800px !important;
+            left: 200px !important;
+            position: absolute !important;
+        }
+
+        .photos .slick-current {
+            transform: scale(1);
+            transition: .3s;
+        }
+        .photos .slick-current img {
+            transition: .3s;
+        }
+        .photos .slick-current + div {
+            opacity: 1 !important;
+        }
+        .photos .slick-current ~ div {
+            /* opacity: 1 !important; */
+        }
+        .photos .slick-current + div + div {
+            opacity: 1 !important;
+        }
+        .photos .slick-current ~ div > img{
+            position: relative;
+            left: 133px;
+            opacity: 1;
+            transform: scale(.8);
+            transition: .5s;
+            opacity: .2;
+        }
+        .photos .slick-current + div > img{
+            position: relative;
+            left: 70px;
+            opacity: 1;
+            transform: scale(.9);
+            transition: .5s;
+            opacity: .5;
+        }
+        .photos .slick-current ~ div > div {
+            /* opacity: 0; */
+            visibility: hidden;
+        }
+        .photos .slick-current + div > div {
+            /* opacity: 0; */
+            visibility: hidden;
+        }
+
+        body > div.photos.slick-initialized.slick-slider > div > div {
+            display: flex;
+        }
+        /* .photos .slick-track {
+            display: flex;
+        } */
+        .slider-navigation > div {
+            cursor: pointer;
+            width: 200px;
+        }
+        .slider-navigation {
+            display: flex;
+            background: #FBFBFB;
+            position: absolute;
+            top: 400px;
+            z-index: 1999;
+            /* width: 50px;
+            height: 70px; */
+        }
+        
+        /* .prev .next-item {
+            left: 0px !important;
+        } */
+
+        .next-item img, .prev-item img  {
+            width: 50px;
+            height: 70px;
+        }
+        .next-item, .prev-item {
+            display: flex;
+            /* left: 0 !important;
+            top: 0 !important; */
+        }
+        .slick-list {
+            height: 100px;
+        }
+        .next .slick-track, .prev .slick-track {
+            display: flex;
+        }
+       
+    </style>
+    </div>
+</body>
+</html>

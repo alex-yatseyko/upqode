@@ -1,12 +1,14 @@
 html, body, ul, li{
     margin: 0;
     padding: 0;
+    margin: 20px;
 }
 
 #gallery{
     width: 860px;
     margin: 0 auto;
     text-align: center;
+    display: flex;
 }
 
 #gallery .photos{
@@ -14,14 +16,30 @@ html, body, ul, li{
     height: 670px;
 }
 
-#gallery .photos img{
-    width: 100%;
+.photos img{
+    width: auto;
     position: absolute;
     left: 0;
     opacity: 0;
     transition: opacity 1s;
+    height: 300px;
 }
 
 #gallery .photos img.showed{
     opacity: 1;
+}
+
+.prev .photos img, .next .photos img {
+    height: 100px;
+    width: auto;
+}
+.buttons {
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+}
+.btn {
+    display: flex;
+    width: 100px;
+    cursor: pointer;
 }
