@@ -75,6 +75,9 @@ nav ul {
     font-size: 14px;
     line-height: 24px;
 }
+.ytp-large-play-button {
+  display: none;
+}
 
 /* Home */
 #home {
@@ -141,16 +144,38 @@ nav ul {
 
 /* Services Section */
 #services {
+  .services-path {
+    position: absolute;
+    padding-top: 500px;
+    left: 25%;
+  }
+  .col {
+    width: 50%;
+  }
   .services-phone-bg {
 
   }
   .services-phone{
     position: absolute;
+    visibility: hidden;
+  }
+  .services-list {
+
   }
   .services-btn {
-    border: 2px solid #00A031;
+    border: 1px solid $color-main;
     box-sizing: border-box;
     border-radius: 28px;
+    color: $color-main;
+    background: transparent;
+    padding: 10px 20px;
+    font-family: Gilroy Regular;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      background: $color-main;
+      color: $bg-color;
+    }
   }
 }
 /* Team Section */
@@ -232,6 +257,7 @@ footer {
     color: transparent;
     background: transparent;
     border: none;
+    cursor: pointer;
 }
 .slick-next {
     right: 50px;
