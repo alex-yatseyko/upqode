@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UpQode Test</title>
     <!-- build:css -->
     <link rel="stylesheet" href="css/style.css">
@@ -22,16 +23,16 @@
                     <div class="hamburger-line"></div>
                 </div>
                 <ul class="header-nav">
-                    <li class="header-nav__item">
+                    <li class="header-nav__item menu-link">
                         <a href="#home" class="header-nav__link">Home</a>
                     </li>
-                    <li class="header-nav__item">
+                    <li class="header-nav__item menu-link">
                         <a href="#services" class="header-nav__link">Services</a>
                     </li>
-                    <li class="header-nav__item">
+                    <li class="header-nav__item menu-link">
                         <a href="#team" class="header-nav__link">Team</a>
                     </li>
-                    <li class="header-nav__item">
+                    <li class="header-nav__item menu-link">
                         <a href="#contact" class="header-nav__link">Contact Us</a>
                     </li>
                 </ul>
@@ -100,42 +101,48 @@
                 <div class="col center-col" id="trigger">
                     <img class="services-phone-bg" src="./img/phone-bg.svg" alt="">
                     <img class="services-phone"src="./img/phone-1.png" alt="">
+                    <img class="services-phone-bg-circle" src="./img/bg-circle.svg" alt="">
                 </div>
-                <div class="col">
-                    <h1>Track every trip you</h1>
-                    <ul class="services-list">
+                <div class="col text-col left-col">
+                    <h1 class="text-col__title">Track every trip you</h1>
+                    <p class="gray">Every one of your trips is captured immediately and is never forgotten.</p>
+                    <ul class="services-list gray">
                         <li><img src="./img/check.png" alt="">No signal dropout</li>
                         <li><img src="./img/check.png" alt="">No missed trips</li>
                     </ul>
-                    <button class="services-btn">learn more <img src="./img/arrow.svg" alt=""></button>
+                    <button class="services-btn">learn more <img class="arrow" src="./img/arrow.svg" alt=""><img class="arrow-white" src="./img/arrow-white.svg" alt=""></button>
                 </div>
             </div>
-            <div class="row">
-                    <div class="col">
-                        <h1>Track every trip you</h1>
-                        <ul class="services-list">
-                            <li><img src="./img/check.png" alt="">No signal dropout</li>
-                            <li><img src="./img/check.png" alt="">No missed trips</li>
+            <div class="row row-reverse">
+                    <div class="col text-col">
+                        <h1 class="text-col__title">Classify with a single swipe </h1>
+                        <p class="gray">Swipe right for business. Swipe left for personal. It’s as easy</br> as that.</p>
+                        <ul class="services-list gray">
+                            <li><img src="./img/check.png" alt="">Review trips on the go</li>
+                            <li><img src="./img/check.png" alt="">Classify journeys in seconds</li>
                         </ul>
-                        <button class="services-btn">learn more <img src="./img/arrow.svg" alt=""></button>
+                        <button class="services-btn">learn more <img class="arrow" src="./img/arrow.svg" alt=""><img class="arrow-white" src="./img/arrow-white.svg" alt=""></button>
                     </div>
-                    <div class="col center-col">
+                    <div class="col center-col left-col">
                             <img class="services-phone-bg" src="./img/phone-bg.svg" alt="">
                             <img class="services-phone"src="./img/phone-2.png" alt="">
+                            <img class="services-phone-bg-circle" src="./img/bg-circle.svg" alt="">
                         </div>
             </div>            
             <div class="row">
-                    <div class="col center-col">
+                    <div class="col center-col pt-5">
                         <img class="services-phone-bg" src="./img/phone-bg.svg" alt="">
                         <img class="services-phone"src="./img/phone-3.png" alt="">
+                        <img class="services-phone-bg-circle" src="./img/bg-circle.svg" alt="">
                     </div>
-                    <div class="col">
-                        <h1>Track every trip you</h1>
-                        <ul class="services-list">
-                            <li><img src="./img/check.png" alt="">No signal dropout</li>
-                            <li><img src="./img/check.png" alt="">No missed trips</li>
+                    <div class="col text-col left-col pt-5">
+                        <h1 class="text-col__title">Claim your money back with ease </h1>
+                        <p class="gray">Claiming mileage has never been so easy, with all calculations done for you.</p>
+                        <ul class="services-list gray">
+                            <li><img src="./img/check.png" alt="">100% HMRC compliance</li>
+                            <li><img src="./img/check.png" alt="">All logs in one place</li>
                         </ul>
-                        <button class="services-btn">learn more <img src="./img/arrow.svg" alt=""></button>
+                        <button class="services-btn">learn more <img class="arrow" src="./img/arrow.svg" alt=""><img class="arrow-white" src="./img/arrow-white.svg" alt=""></button>
                     </div>
             </div>
         </div>
@@ -296,16 +303,16 @@
         <nav>
             <ul class="footer-nav">
                 <li class="footer-nav__item">
-                    <a href="#home" class="footer-nav__link">Home</a>
+                    <a href="#home" class="menu-link footer-nav__link">Home</a>
                 </li>
                 <li class="footer-nav__item">
-                    <a href="#services" class="footer-nav__link">Services</a>
+                    <a href="#services" class="menu-link footer-nav__link">Services</a>
                 </li>
                 <li class="footer-nav__item">
-                    <a href="#team" class="footer-nav__link">Team</a>
+                    <a href="#team" class="menu-link footer-nav__link">Team</a>
                 </li>
                 <li class="footer-nav__item">
-                    <a href="#contact" class="footer-nav__link">Contact Us</a>
+                    <a href="#contact" class="menu-link footer-nav__link">Contact Us</a>
                 </li>
             </ul>
         </nav>
@@ -324,31 +331,8 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js'></script>
-
-    <script>
-        console.clear();
-        TweenLite.defaultEase = Linear.easeNone;
-        var controller = new ScrollMagic.Controller();
-        var tl = new TimelineMax();
-        var motionPath = MorphSVGPlugin.pathDataToBezier("#motionPath", {align:"#motionCircleSVG"});
-        var h = document.querySelector("#motionPath").getBoundingClientRect().height;
-
-        TweenMax.set("#motionCircleSVG", {transformOrigin:"center center", xPercent:-50, yPercent:-50})
-
-        tl.from('#motionPath', 2,{drawSVG:0});
-        tl.to("#motionCircleSVG", 2, {bezier:{type:"cubic", values:motionPath}}, 0);
-
-        var scene = new ScrollMagic.Scene({
-            duration: h,
-            triggerHook: 0.2,
-        })
-        .triggerElement("#trigger")
-        // .addIndicators()
-        .setTween(tl)
-        .addTo(controller);
-    </script>
     <script src="js/script.js"></script>
-    <script src="js/map-features.js"></script>
+    <!-- <script src="js/map-features.js"></script> -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsrzu7kZosxUY75dn2InyYRqkyhdCto6M&callback=initMap" async defer></script>
     <!-- endbuild  -->
 </body>

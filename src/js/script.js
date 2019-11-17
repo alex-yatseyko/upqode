@@ -92,6 +92,17 @@ function resizePlayer(iframes, ratio) {
   });
 }
 
+// Scroll to ID
+$(".header-nav__link[href^='#']").click(function(e) {
+	e.preventDefault();
+	
+	var position = $($(this).attr("href")).offset().top;
+
+	$("body, html").animate({
+		scrollTop: position
+	}, 500 );
+});
+
 // DOM Ready
 $(function() {
   // Initialize
@@ -152,8 +163,29 @@ $(window).on("resize.slickVideoPlayer", function(){
   resizePlayer(iframes, 16/9);
 });
 
-// Maps
 
+console.clear();
+TweenLite.defaultEase = Linear.easeNone;
+const controller = new ScrollMagic.Controller();
+const tl = new TimelineMax();
+const motionPath = MorphSVGPlugin.pathDataToBezier("#motionPath", {align:"#motionCircleSVG"});
+const h = document.querySelector("#motionPath").getBoundingClientRect().height;
+
+TweenMax.set("#motionCircleSVG", {transformOrigin:"center center", xPercent:-50, yPercent:-50})
+
+tl.from('#motionPath', 2,{drawSVG:0});
+tl.to("#motionCircleSVG", 2, {bezier:{type:"cubic", values:motionPath}}, 0);
+
+const scene = new ScrollMagic.Scene({
+    duration: h,
+    triggerHook: 0.1,
+})
+.triggerElement("#trigger")
+// .addIndicators()
+.setTween(tl)
+.addTo(controller);
+
+// Maps
 const mapStyles = [
   {
       "elementType": "geometry",
@@ -375,3 +407,5 @@ const mapStyles = [
       // The marker
       const marker4 = new google.maps.Marker({position: coords[3], map: map4,  icon: icons['icon']});
       }
+
+// TweenMax Animation
