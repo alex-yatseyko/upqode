@@ -93,7 +93,7 @@ function resizePlayer(iframes, ratio) {
 }
 
 // Scroll to ID
-$(".header-nav__link[href^='#']").click(function(e) {
+$(".menu-link[href^='#']").click(function(e) {
 	e.preventDefault();
 	
 	var position = $($(this).attr("href")).offset().top;
@@ -103,8 +103,10 @@ $(".header-nav__link[href^='#']").click(function(e) {
 	}, 500 );
 });
 
+
 // DOM Ready
 $(function() {
+
   // Initialize
   slideWrapper.on("init", function(slick){
     slick = $(slick.currentTarget);
@@ -128,6 +130,54 @@ $(function() {
       // slideWrapper.slick("slickPlay");
     }
   });
+
+
+
+  // Team Slider
+
+  $('.photos').slick({
+    arrows: true,
+    infinite:false,
+    autoplay:false,
+    slidesToShow:1,
+    adaptiveHeight: true,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    slidesToScroll:1,
+    centerMode: true,
+    draggable: false,
+    centerMode: true,
+    fade: true,
+    cssEase: 'ease-in-out',
+    touchThreshold: 100
+})
+$('.next').slick({
+    infinite:false,
+    autoplay:false,
+    slidesToShow:1,
+    slidesToScroll:1,
+    fade: true,
+    arrows: false,
+})
+$('.prev').slick({
+    infinite:false,
+    autoplay:false,
+    slidesToShow:1,
+    slidesToScroll:1,
+    fade: true,
+    arrows: false
+})
+$('.next').click(() => {
+    $('.next').slick("slickNext")
+    $('.prev').slick("slickNext")
+})
+$('.prev').click(() => {
+    $('.next').slick("slickPrev")
+    $('.prev').slick("slickPrev")
+})
+
+
+
 
   // Start the slider
   mapWrapper.slick({
