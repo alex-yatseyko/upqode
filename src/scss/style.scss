@@ -747,7 +747,13 @@ footer {
 
 @media screen and (max-width: 768px){
   #home .slick-arrow {
-    display: none;
+    display: none !important;
+  }
+  #team, #contact {
+    margin-top: 10rem;
+  }
+  #contact {
+    height: 1300px;
   }
   .photos .photos-item {
     flex-direction: column-reverse;
@@ -757,6 +763,7 @@ footer {
     top: 0px;
     width: 100%;
     flex-direction: column;
+    height: 300px;
   }
   .slider-navigation .slick-list {
     width: 100vw;
@@ -764,9 +771,22 @@ footer {
   .photos .slick-list {
     height: 1px; 
   }
+  .photos .photos-item {
+    align-items: center;
+  }
   .photos-item__details {
     width: 100% !important;
     padding: 3rem;
+  }
+  .map-slider .map-slider__content {
+    top: 367px !important;
+    left: 50vw !important;
+  }
+  .map-slider .slick-dots {
+    margin-top: 800px;
+  }
+  .map-slider .slick-track {
+    height: 1000px;
   }
 }
 
