@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
-var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify-es').default;
 var concat = require('gulp-concat');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
@@ -12,13 +12,14 @@ var htmlReplace = require('gulp-html-replace');
 var htmlMin = require('gulp-htmlmin');
 var del = require('del');
 var sequence = require('run-sequence');
+var gulpFont = require('gulp-font');
 
 var config = {
   dist: 'dist/',
   src: 'src/',
   cssin: 'src/css/**/*.css',
   jsin: 'src/js/**/*.js',
-  imgin: 'src/img/**/*.{jpg,jpeg,png,gif}',
+  imgin: 'src/img/**/*.{jpg,jpeg,png,gif,svg}',
   htmlin: 'src/*.html',
   scssin: 'src/scss/**/*.scss',
   cssout: 'dist/css/',
@@ -29,7 +30,7 @@ var config = {
   cssoutname: 'style.css',
   jsoutname: 'script.js',
   cssreplaceout: 'css/style.css',
-  jsreplaceout: 'js/script.js'
+  jsreplaceout: 'js/script.js',
 };
 
 gulp.task('reload', function() {
@@ -76,6 +77,12 @@ gulp.task('img', function() {
     .pipe(changed(config.imgout))
     .pipe(imagemin())
     .pipe(gulp.dest(config.imgout));
+});
+
+gulp.task('fonts', function() {
+  return gulp.src('src/fonts/*.{ttf,woff,woff2,svg,eot}')
+      .pipe(gulpFont())
+      .pipe(gulp.dest('./build/fonts/'))
 });
 
 gulp.task('html', function() {
